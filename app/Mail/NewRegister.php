@@ -38,7 +38,7 @@ class NewRegister extends Mailable
             $info = pathinfo($this->path);
 
             return $this->markdown('emails.newRegister')
-                        ->subject('Zgloszenie na rajd')
+                        ->subject('Zgloszenie na rajd - '.$this->member->name.' '.$this->member->lastname)
                         ->attach($this->path, ['as' => 'potwierdzenie.'.$info['extension']])
                         ->attachData($this->pdf, 'zgloszenie.pdf', [
                             'mime' => 'application/pdf',
@@ -46,7 +46,7 @@ class NewRegister extends Mailable
         }
 
         return $this->markdown('emails.newRegister')
-                    ->subject('Zgloszenie na rajd')
+                    ->subject('Zgloszenie na rajd - '.$this->member->name.' '.$this->member->lastname)
                     ->attachData($this->pdf, 'zgloszenie.pdf', [
                         'mime' => 'application/pdf',
                     ]);

@@ -11,7 +11,9 @@
 |
 */
 
-// Auth::routes();
+Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('test', 'HomeController@test');
 Route::post('addMember', 'HomeController@store')->name('addMember');
+
+Route::get('test', 'HomeController@test');
+Route::get('lista', 'HomeController@lista')->middleware('auth.basic');

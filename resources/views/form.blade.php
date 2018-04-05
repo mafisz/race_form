@@ -235,7 +235,7 @@
                                         <div class="form-group">
                                             <label for="model">Turbo</label>
                                             <div class="form-check">
-                                              <input class="form-check-input" type="checkbox" id="turbo" value="tak">
+                                              <input class="form-check-input" type="checkbox" name="turbo" id="turbo" value="1">
                                               <label class="form-check-label" for="turbo">Tak</label>
                                             </div>
                                             @if ($errors->has('turbo'))

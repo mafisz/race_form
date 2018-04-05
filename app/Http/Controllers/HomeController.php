@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Sign;
 use App\Mail\NewRegister;
 use PDF;
+use Excel;
+use App\Exports\SignsExport;
 
 class HomeController extends Controller
 {
@@ -108,5 +110,10 @@ class HomeController extends Controller
         catch(\Exception $e){
             dd($e);
         }
+    }
+
+    public function lista()
+    {
+        return Excel::download(new SignsExport, 'lista.xlsx');
     }
 }
