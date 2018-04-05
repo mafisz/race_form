@@ -102,6 +102,11 @@ class HomeController extends Controller
         $pdf = PDF::loadView('pdf.formularz', compact('data'))->output();
 
         // mail do kierowcy
-        \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $sign->path));
+        try{
+            \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $sign->path));
+        }
+        catch(/Exception $e){
+            dd($e);
+        }
     }
 }
