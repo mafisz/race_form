@@ -11,7 +11,7 @@
 |
 */
 
-Auth::routes();
+// Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::post('addMember', 'HomeController@store')->name('addMember');
 
