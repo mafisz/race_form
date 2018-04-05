@@ -15,5 +15,5 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::post('addMember', 'HomeController@store')->name('addMember');
 
-Route::get('test', 'HomeController@test');
+Route::get('test', 'HomeController@test')->middleware('auth.basic');
 Route::get('lista', 'HomeController@lista')->middleware('auth.basic');
