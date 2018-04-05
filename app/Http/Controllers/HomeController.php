@@ -85,12 +85,12 @@ class HomeController extends Controller
         $data = $sign;
 
         $pdf = PDF::loadView('pdf.formularz', compact('data'))->output();
-        // dd($path);
+        
         // mail do kierowcy
         \Mail::to($sign->email)->send(new NewRegister($sign, $pdf, $path));
 
         // mail do racegc
-        // \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $path));
+        \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $path));
 
         return redirect()->back()->with('success', "Zgłoszenie zostało przyjęte. Na Twój adres email zostanie wysłane potwierdzenie.");
     }
