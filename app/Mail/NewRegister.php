@@ -37,7 +37,7 @@ class NewRegister extends Mailable
         if($this->path){
             return $this->markdown('emails.newRegister')
                         ->subject('Zgloszenie na rajd')
-                        ->attach(storage_path($this->path))
+                        ->attach($this->path)
                         ->attachData($this->pdf, 'zgloszenie.pdf', [
                             'mime' => 'application/pdf',
                         ]);
