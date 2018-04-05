@@ -105,7 +105,7 @@ class HomeController extends Controller
         try{
             \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $sign->path));
         }
-        catch(/Exception $e){
+        catch(\Exception $e){
             dd($e);
         }
     }
