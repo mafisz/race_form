@@ -68,7 +68,17 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="driving_license">Nr prawo jazdy <span class="text-danger">*</span></label>
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                    <input type="email" name="email" value="{{ old('email') }}" class="form-control" required> 
+                                    @if ($errors->has('email'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="driving_license">Nr prawo jazdy<span class="text-danger">*</span></label>
                                     <input type="text" name="driving_license" value="{{ old('driving_license') }}" class="form-control" required> 
                                     @if ($errors->has('driving_license'))
                                         <span class="invalid-feedback">
@@ -78,7 +88,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="oc">Nazwa nr polisy OC <span class="text-danger">*</span></label>
+                                    <label for="oc">Nazwa nr polisy OC<span class="text-danger">*</span></label>
                                     <input type="text" name="oc" value="{{ old('oc') }}" class="form-control" required> 
                                     @if ($errors->has('oc'))
                                         <span class="invalid-feedback">
@@ -146,6 +156,16 @@
                                     @if ($errors->has('pilot_phone'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('pilot_phone') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="pilot_email">Email</label>
+                                    <input type="email" name="pilot_email" value="{{ old('pilot_email') }}" class="form-control"> 
+                                    @if ($errors->has('pilot_email'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('pilot_email') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -306,12 +326,12 @@
                         <div class="row">
                             <div class="col-md-4 offset-md-4 text-center p-3">
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" id="terms" value="1" required>
+                                  <input class="form-check-input" type="checkbox" name="terms" id="terms" value="1" required>
                                   <label class="form-check-label" for="terms">Akceptuję regulamin rajdu <span class="text-danger">*</span></label>
                                 </div>
-                                @if ($errors->has('turbo'))
+                                @if ($errors->has('terms'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('turbo') }}</strong>
+                                        <strong>{{ $errors->first('terms') }}</strong>
                                     </span>
                                 @endif
                             </div>
