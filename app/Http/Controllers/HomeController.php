@@ -49,7 +49,7 @@ class HomeController extends Controller
             'rok' => 'required|string|max:255',
             'klasa' => 'required|string|max:255',
             'terms' => 'accepted',
-            'payment' => 'nullable|file|mimes:jpeg,bmp,png,pdf,jpg,doc|max:3000'
+            'payment' => 'nullable|file|mimes:jpeg,png,pdf,jpg|max:3000'
         ]);
 
         $sign = new Sign();

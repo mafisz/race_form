@@ -313,7 +313,8 @@
 
                                 <div class="form-group">
                                     <label for="payment">Potwierdzenie przelewu</label>
-                                    <input type="file" name="payment" class="form-control"> 
+                                    <input type="file" name="payment" class="form-control">
+                                    <small class="form-text text-muted">Dozwolony format pliku: .pdf, .jpeg, .png, .jpg. Maksymalny rozmiar pliku 3MB</small>
                                     @if ($errors->has('payment'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('payment') }}</strong>
