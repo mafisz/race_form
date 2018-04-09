@@ -336,6 +336,9 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="col-md-8 offset-md-2 p-3 d-flex justify-content-center">
+                                <div class="g-recaptcha" data-sitekey="6Ldm61EUAAAAANDn85_G-Ie2_5lSIBD7ikrp-qpk"></div>
+                            </div>
                             <div class="col-md-4 offset-md-4">
                                 <button type="submit" class="btn btn-primary btn-block">
                                     Zapisz się

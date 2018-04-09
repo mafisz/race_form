@@ -49,8 +49,16 @@ class HomeController extends Controller
             'rok' => 'required|string|max:255',
             'klasa' => 'required|string|max:255',
             'terms' => 'accepted',
-            'payment' => 'nullable|file|mimes:jpeg,png,pdf,jpg|max:3000'
+            'payment' => 'nullable|file|mimes:jpeg,png,pdf,jpg|max:3000',
+            'g-recaptcha-response' => 'required',
         ]);
+
+        $secret = env('RECAPTCHA_SECRET_KEY');
+        // //get verify response data
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$request->get('g-recaptcha-response'));
+        $responseData = json_decode($verifyResponse);
+        if(!$responseData->success)
+            return redirect()->back()->with('danger', 'Nie przeszedłeś pomyślnie weryfikacji przeciwko robotom. Spróbuj jeszcze raz.');
 
         $sign = new Sign();
         $sign->name = $request->name;
