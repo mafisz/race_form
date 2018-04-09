@@ -9,6 +9,7 @@
         <th>Klasa</th>
         <th>Kierowca telefon</th>
         <th>Pilot telefon</th>
+        <th>Samochód info</th>
         <th>Kierowca adres</th>
         <th>Kierowca seria nr dowodu osobistego</th>
         <th>Kierowca email</th>
@@ -30,10 +31,11 @@
             <td>{{ $sign->lastname }}</td>
             <td>{{ $sign->pilot_name }}</td>
             <td>{{ $sign->pilot_lastname }}</td>
-            <td>{{ $sign->marka }} {{ $sign->model }},nr rej: {{ $sign->nr_rej }}, rok: {{ $sign->rok }}, {{ $sign->ccm }}ccm, Turbo: {{ $sign->turbo }}</td>
+            <td>{{ $sign->marka }} {{ $sign->model }}</td>
             <td>{{ $sign->klasa }}</td>
             <td>{{ $sign->phone }}</td>
             <td>{{ $sign->pilot_phone }}</td>
+            <td>nr rej: {{ $sign->nr_rej }}, rok: {{ $sign->rok }}, {{ $sign->ccm }}ccm, Turbo: {{ $sign->turbo }}</td>
             <td>{{ $sign->address }}</td>
             <td>{{ $sign->id_card }}</td>
             <td>{{ $sign->email }}</td>
