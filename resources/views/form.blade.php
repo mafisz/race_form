@@ -286,6 +286,7 @@
                                         <div class="form-group">
                                             <label for="klasa">Klasa <span class="text-danger">*</span></label>
                                             <select name="klasa" class="form-control" required>
+                                              <option disabled selected value>Wybierz klasę</option>
                                               <option value="K1">K1</option>
                                               <option value="K2">K2</option>
                                               <option value="K3">K3</option>
