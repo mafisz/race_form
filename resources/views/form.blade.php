@@ -337,12 +337,23 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="col-md-6 offset-md-3 text-center p-3">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="terms2" id="terms2" value="1" required>
+                                  <label class="form-check-label" for="terms2">Zezwalam na wykorzystanie moich danych osobowych na potrzeby Rajdowego Pucharu Śląska związane z organizacją zawodów, promowaniem załogi oraz pucharu.<span class="text-danger">*</span></label>
+                                </div>
+                                @if ($errors->has('terms2'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('terms2') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                             <div class="col-md-8 offset-md-2 p-3 d-flex justify-content-center">
                                 <div class="g-recaptcha" data-sitekey="6Ldm61EUAAAAANDn85_G-Ie2_5lSIBD7ikrp-qpk"></div>
                             </div>
                             <div class="col-md-4 offset-md-4">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    Zapisz się
+                                    Zapisz
                                 </button>
                             </div>
                         </div>

@@ -22,8 +22,8 @@
     <div class="section">
         <div style="width:60%;float:left;">
             <h3>
-                Rajdowy Puchar Śląska ELINSTAL<br>
-                2 Runda 1 Łodygowicki Rally Sprint
+                Rajdowy Puchar Śląska Elinstal III Runda<br>
+                "3 Rajd o Puchar Prezydenta Miasta Jastrzębie Zdrój"
             </h3>
         </div>
 
@@ -120,7 +120,7 @@
             </table>
         </div>
         <div style="clear: both;margin-top: 10px;margin-bottom: 50px;">
-            <p style="text-align: center;font-size: 12px;">Zgłaszam swój udział w 2 Rundzie Rajdowego Pucharu Śląska i stwierdzam swoim podpisem prawdziwość danych zawartych w Zgłoszeniu. Oświadczam, iż biorę udział w Zawodach na własną odpowiedzialność i zrzekam się wszelkich roszczeń w stosunku do Organizatora Zawodów w razie jakiegokolwiek wypadku lub szkody wyrządzonym sobie czy innym osobą lub mieniu. Stwierdzam że znane mi są postanowienia Regulaminu Zawodów i warunki bezpieczeństwa obowiązujące uczestników.</p>
+            <p style="text-align: center;font-size: 12px;">Zgłaszam swój udział w 3 Rundzie Rajdowego Pucharu Śląska i stwierdzam swoim podpisem prawdziwość danych zawartych w Zgłoszeniu. Oświadczam, iż biorę udział w Zawodach na własną odpowiedzialność i zrzekam się wszelkich roszczeń w stosunku do Organizatora Zawodów w razie jakiegokolwiek wypadku lub szkody wyrządzonym sobie czy innym osobą lub mieniu. Stwierdzam że znane mi są postanowienia Regulaminu Zawodów i warunki bezpieczeństwa obowiązujące uczestników.</p>
         </div>
 
         <div style="width: 35%; display: block; float: left;">

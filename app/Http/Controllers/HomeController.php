@@ -49,6 +49,7 @@ class HomeController extends Controller
             'rok' => 'required|string|max:255',
             'klasa' => 'required|string|max:255',
             'terms' => 'accepted',
+            'terms2' => 'accepted',
             'payment' => 'nullable|file|mimes:jpeg,png,pdf,jpg|max:3000',
             'g-recaptcha-response' => 'required',
         ]);
@@ -104,21 +105,6 @@ class HomeController extends Controller
         \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $path));
 
         return redirect()->back()->with('success', "Zgłoszenie zostało przyjęte. Na Twój adres email zostanie wysłane potwierdzenie.");
-    }
-
-    public function test(){
-        $sign = Sign::first();
-        $data = $sign;
-
-        $pdf = PDF::loadView('pdf.formularz', compact('data'))->output();
-
-        // mail do kierowcy
-        try{
-            \Mail::to(env('APP_MAIL'))->send(new NewRegister($sign, $pdf, $sign->path));
-        }
-        catch(\Exception $e){
-            dd($e);
-        }
     }
 
     public function lista()
